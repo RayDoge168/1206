@@ -27,12 +27,6 @@ sub.end.pos = end.pos[[1]][i] + attr(end.pos[[1]], "match.length")[i] - 1
 sub_txt = substr(txt_new, sub.start.pos, sub.end.pos)
 sub_txt
 
-sub_txt = gsub('单本腹计', '', sub_txt)
-sub_txt = gsub('</?tr>', '', sub_txt)
-sub_txt = gsub('</?td>', '', sub_txt)
-sub_txt = gsub(' ', '', sub_txt)
-sub_txt
-
 NTU_info = function () {
   
   result = data.frame(item = c('单本腹计', '单禘计', '单皘计', '单ICU计', '单崩计'),
@@ -65,4 +59,5 @@ NTU_info = function () {
 }
 
 NTU_info()
+
 
