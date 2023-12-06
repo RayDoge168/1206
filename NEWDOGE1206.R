@@ -96,13 +96,13 @@ website = read_html(URL)
 
 website %>% html_nodes("a") %>% .[8] %>% html_attr("href")
 
-my_table = matrix("", nrow = 30, ncol = 4)
+my_table = matrix("", nrow = 10, ncol = 4)
 colnames(my_table) = c("Title", "url", "ID", "time")
 
 URL = "https://www.ptt.cc/bbs/AllTogether/index.html"
 current_id = 1
 
-for (i in 1:30) {
+for (i in 1:10) {
   
   website = read_html(URL)
   needed_html = website %>% html_nodes("a")
